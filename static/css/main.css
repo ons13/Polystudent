@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500|Rubik:400,500&display=swap");
+
+/* Global styles */
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Navbar */
+.logo {
+  width: 70px;
+  height: 40px;
+}
+
+.navbar {
+  background-color: white;
+  color: black;
+  
+}
+.navbar-brand{
+    padding-left: 20px;
+    color: #000000;
+
+}
+.nav-link {
+  color: white;
+
+}
+
+.nav-link:hover {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+/* Cards */
+.card {
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #d3e1e8;
+  color: black;
+  font-weight: 500;
+}
+
+.card-header:hover {
+  background-color: #a7b6bb;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.card-img-top {
+  size: 100% ;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.2s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.02);
+}
+
+.card-title {
+  font-weight: 500;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Buttons */
+.btn {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  border-radius: 20px;
+  border: none;
+  color: black;
+  padding: 0.7rem 1.4rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #009ed8;
+}
+
+.btn-primary:hover {
+  background-color: #0078a8;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+}
+
+/* Responsive design */
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 4;
+  }
+}
+/* Container styles */
+.container {
+  max-width:max-content;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Form styles */
+.notes-form {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.notes-legend {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Input styles */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Button styles */
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0062cc;
+}
+  /* Adjustments for smaller screens */
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  input[type="text"],
+  textarea {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+.card-body {
+    height: 100px;
+    overflow: hidden;
+}
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+

@@ -1,0 +1,26 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+
+<section class='container-fluid bg-light'>
+    <div class="container my-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-8 col-lg-6 text-center">
+    
+                <h2 class="display-4">{{notes.title}}</h2>
+                <hr class="my-4">
+    
+                <p class="lead">{{notes.description}}</p>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+
+</section>
+
+{% endblock content %}
