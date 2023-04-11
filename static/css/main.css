@@ -170,6 +170,12 @@ textarea {
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+}
+
+input[type="text"]:hover,
+textarea:hover {
+  border-color: #007bff;
 }
 
 /* Button styles */
@@ -181,6 +187,8 @@ button[type="submit"] {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  font-family: "Rubik", sans-serif;
+
 }
 
 button[type="submit"]:hover {
@@ -193,6 +201,7 @@ button[type="submit"]:hover {
   }
 
   input[type="text"],
+  
   textarea {
     font-size: 14px;
     padding: 5px;
@@ -206,11 +215,20 @@ button[type="submit"]:hover {
     height: 100px;
     overflow: hidden;
 }
-
 .card-text {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #ffffff; /* light gray background color */
+  color: #333; /* dark text color */
 }
 
 

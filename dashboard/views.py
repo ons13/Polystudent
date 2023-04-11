@@ -6,6 +6,8 @@ from django.views import generic
 from youtubesearchpython import VideosSearch
 import requests
 import wikipedia
+from .forms import UserRegistrationForm
+
 
 # Create your views here.
 def home(request):
@@ -311,4 +313,38 @@ def conversion(request):
 
     return render(request, "dashboard/conversion.html",context)
 
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request,f"Account Created For{username}")
+            return redirect("login")
+    else:
+        form = UserRegistrationForm()
+    context={
+        'form':form
+        }
+    return render(request,"dashboard/register.html",context)
+def profile(request):
+    homeworks = Homework.objects.filter(is_finished=False,user=request.user)
+    todos = Todo.objects.filter(is_finished=False,user=request.user)
+    if len(homeworks)==0:
+        homework_done = True
+    else:
+        homework_done=False    
     
+    if len(todos)==0:
+        todos_done = True
+    else:
+        todos_done=False
+    context={
+        'homeworks': homeworks,
+        'todos':todos,
+        'homework_done':homework_done,
+        'todos_done':todos_done
+    }    
+    return render(request,"dashboard/profile.html",context)
